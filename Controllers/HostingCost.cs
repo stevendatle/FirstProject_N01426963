@@ -13,13 +13,20 @@ namespace FirstProject_N01426963.Controllers
     {
         public string Get(int id)
         {
-            //a is default cost, b is fortnights, c is tax, d is total
+            //a is default cost, b is fortnights, c is tax, d is total without tax, e is total with tax
             double a = 5.50;
-            int b = id / 14;
+            double b = id / 14;
             double c = 1.13;
             double d = a * b;
+            double e = d * c;
 
-            return b + "fortnights at $5.50/FN = " + d;
+            string message1 = "fortnights at $5.50/FN = " + d;
+            string message2 = "HST 13% = " + c;
+            string message3 = "Total " + e;
+
+            return (message1 + message2 + message3);
+           
+            
             
         }
     }
