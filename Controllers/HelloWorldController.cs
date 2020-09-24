@@ -7,15 +7,13 @@ using System.Web.Http;
 
 namespace FirstProject_N01426963.Controllers
 {
-    public class SubTwentyController : ApiController
+    public class HelloWorldController : ApiController
     {
-
-        //Get /api/SubTwenty/30 -> 10
-        public int Get(int id)
+        public IEnumerable<string> Post()
         {
-
-            return id - 20;
+            return new string[] { "Hello World!" };
         }
+
+
     }
-   
 }
